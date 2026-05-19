@@ -12,8 +12,8 @@
 body {
 	padding: 0;
 	margin: 0;
-	background-color: rgb(130, 130, 130);
-	color: rgb(100, 74, 111);
+	background-color: rgb(30, 30, 30);
+	color: rgb(255, 255, 255);
 	overflow-x: hidden;
 }
 
@@ -27,21 +27,39 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	color: white;
+	z-index: 999;
 }
 
 #header #links {
 	display: flex;
 	flex-direction: row;
 	gap: 1.2rem;
+
 }
 
 #header #links a {
 	color: white;
 	text-decoration: none;
+	font-size: 100%;
 }
 
 #header #links a:hover {
 	color: rgb(230, 171, 255);
+	text-decoration: underline;
+}
+
+#header #links .currently-selected {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+
+#banner {
+	padding: 1%;
+	padding-left: 8%;
+	padding-right: 8%;
+	background: linear-gradient(224deg, rgba(71, 59, 125, 1) 0%, rgb(37, 25, 56) 100%);
+	display: flex;
+	justify-content: space-between;
 }
 
 #hero {
@@ -49,20 +67,39 @@ body {
 	padding-left: 20%;
 	padding-right: 20%;
 	background-image:
-		url(/web-assets/artworks/painterly\ study\ 2.png);
+		linear-gradient(180deg, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 100%),
+		url(/web-assets/artworks/mainmenu.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+	text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.61);
+}
+
+#hero-alt {
+	height: 30%;
+	padding-left: 20%;
+	padding-right: 20%;
+	background-image:
+		linear-gradient(180deg, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 100%),
+		url(/web-assets/artworks/mainmenu.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 1.4rem;
 	text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.61);
 }
 
 #hero * {
-	margin: 10px;
+	padding: 4%;
 	color: white;
+	text-align: center;
 }
 
 #hero img {
@@ -70,8 +107,50 @@ body {
 }
 
 #content {
-	padding-left: 8%;
-	;
+	font-size: 1.2rem;
+	text-align: justify;
+	padding-left: 32%;
+	padding-right: 32%;
+	padding-top: 8%;
+	padding-bottom: 8%;
+	color: white;
+	background-color: black;
+}
+
+#content img {
+	width: 100%;
+	border-radius: 5px 5px 0px 0px;
+}
+
+#content h1 {
+	padding-bottom: 2%;
+}
+
+#content #artwork-container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+#content #artwork-container .artwork {
+	padding: 2%;
+}
+
+#content .artwork-info {
+	font-size: 1.4rem;
+	border-radius: 0px 0px 5px 5px;
+	background-color: rgb(45, 45, 45);
+	padding: 8%;
+}
+
+
+.mono {
+	font-family: monospace;
+	font-size: 1rem;
+	color: rgb(180, 180, 180);
+}
+
+hr {
+	margin: 5%;
 }
 
 #footer {
@@ -103,13 +182,17 @@ body {
 	gap: 2%;
 }
 
-#footer a {
+a {
 	color: rgb(235, 189, 255);
 	text-decoration: none;
 }
 
-#footer a:hover {
+a:hover {
 	color: rgb(255, 255, 255);
+}
+
+#header .currently-selected {
+	color: rgb(235, 189, 255);
 }
 
 
@@ -118,19 +201,49 @@ body {
 }
 
 @media (max-width: 630px) {
+
+
 	#links a {
 		display: none;
 	}
 
 	#links-dropdown {
 		display: block;
-		padding: 5px;
+		padding: 10px;
 		border-radius: 5px;
+		background-color: rgb(30, 30, 30);
+		border: 1px solid rgb(100, 74, 111);
+		color: white;
 	}
+
+	#hero p {
+		display: none;
+	}
+
+
 }
 
 
 @media (max-width: 1000px) {
+
+	#banner {
+		padding: 2%;
+		padding-left: 8%;
+		padding-right: 8%;
+		background: linear-gradient(224deg, rgba(71, 59, 125, 1) 0%, rgb(37, 25, 56) 100%);
+	}
+
+	#content {
+		font-size: 1.2rem;
+		text-align: justify;
+		padding-left: 8%;
+		padding-right: 8%;
+		padding-top: 8%;
+		padding-bottom: 8%;
+		color: white;
+		background-color: black;
+	}
+
 	#footer {
 		padding-top: 8%;
 		padding-bottom: 8%;
@@ -148,6 +261,10 @@ body {
 		font-size: 0.9rem;
 	}
 
+	#footer #footer-links {
+		display: none;
+	}
+
 	#footer #logo-footer {
 		padding-bottom: 10%;
 		display: flex;
@@ -156,5 +273,10 @@ body {
 
 	#footer #footer-text {
 		text-align: center;
+	}
+
+	#content #artwork-container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
