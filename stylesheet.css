@@ -1,0 +1,160 @@
+:root {
+	font-family: Inter, sans-serif;
+	font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: InterVariable, sans-serif;
+	}
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: rgb(130, 130, 130);
+	color: rgb(100, 74, 111);
+	overflow-x: hidden;
+}
+
+#header {
+	padding-left: 8%;
+	background-color: rgb(0, 0, 0);
+	padding-right: 8%;
+	height: 8%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+#header #links {
+	display: flex;
+	flex-direction: row;
+	gap: 1.2rem;
+}
+
+#header #links a {
+	color: white;
+	text-decoration: none;
+}
+
+#header #links a:hover {
+	color: rgb(230, 171, 255);
+}
+
+#hero {
+	height: 92%;
+	padding-left: 20%;
+	padding-right: 20%;
+	background-image:
+		url(/web-assets/artworks/painterly\ study\ 2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 1.6rem;
+	text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.61);
+}
+
+#hero * {
+	margin: 10px;
+	color: white;
+}
+
+#hero img {
+	max-width: 100%;
+}
+
+#content {
+	padding-left: 8%;
+	;
+}
+
+#footer {
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding-left: 8%;
+	padding-right: 8%;
+	background-color: rgb(30, 30, 30);
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: 8px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 0.9rem;
+}
+
+#footer #footer-text {
+	text-align: right;
+}
+
+#footer #footer-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	gap: 2%;
+}
+
+#footer a {
+	color: rgb(235, 189, 255);
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: rgb(255, 255, 255);
+}
+
+
+#links-dropdown {
+	display: none;
+}
+
+@media (max-width: 630px) {
+	#links a {
+		display: none;
+	}
+
+	#links-dropdown {
+		display: block;
+		padding: 5px;
+		border-radius: 5px;
+	}
+}
+
+
+@media (max-width: 1000px) {
+	#footer {
+		padding-top: 8%;
+		padding-bottom: 8%;
+		padding-left: 8%;
+		padding-right: 8%;
+		background-color: rgb(30, 30, 30);
+		color: white;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 8px;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 0.9rem;
+	}
+
+	#footer #logo-footer {
+		padding-bottom: 10%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#footer #footer-text {
+		text-align: center;
+	}
+}
