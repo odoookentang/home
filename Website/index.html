@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Homepage - ododevs</title>
+</head>
+
+<body>
+    <div id="header">
+        <div>
+            <img src="web-assets/ododevs logo white.svg" style="height: 35%" />
+        </div>
+        <div id="links">
+            <a href="art/">Artworks</a>
+            <a href="projects/">Projects</a>
+            <a href="subsystem/">Services</a>
+            <a href="blog/">Blog</a>
+        </div>
+        <select id="links-dropdown">
+            <option value="">Homepage</option>
+            <option value="art">Artworks</option>
+            <option value="projects">Projects</option>
+            <option value="subsystem">Services</option>
+            <option value="blog">Blog</option>
+        </select>
+    </div>
+    <div id="hero">
+        <img src="web-assets/artworks/adipllogo.svg" style="
+                    filter: invert(100%)
+                        drop-shadow(0px 4px 8px rgba(0, 0, 0, 50));
+                    height: 35%;
+                " />
+        <p>The first installment in the A Day in Parker's Life Visual Novel Series.<br><i>Can Katya fullfill her wish to
+                become Parker's girlfriend?</i></p>
+        <div></div>
+    </div>
+    <div id="banner" style="display:block;">
+        Subsystem 9.1.90 released!
+        <a href="">See what's new...</a>
+    </div>
+    <div id="content">
+        <h1>About</h1>
+        <p>
+            Hi! I'm ododevs, and I run the ododevs Subsystem's website,
+            a home to all the projects I've worked on for the longer
+            parts of my living life. See what projects I've worked
+            in and more on the <a href="projects/">Projects</a> section. It contains arts for my game "A Day in Parker's
+            Life" and bespoke apps used throughout my life.
+        </p>
+        <p>I also offer services (for both physical and digital goods) such as art commissions, photography, or custom
+            services such as video editing, translation work (English-Indonesian and vice-versa), graphic design through
+            the Subsystem Pipeliner. Message me on Instagram for more information regarding this.</p>
+        <hr>
+        <h1>
+            Inquire Me!
+        </h1>
+        <p>
+            Hehe~ decided to hit my line? Reach out to my <a href="INSTA LINK">Instagram</a>
+            as I'm the most active there. For more formal conversations, I am also
+            reachable via <a href="WHATSAPP LINK">WhatsApp</a> or my personal
+            <a href="EMAIL">E-mail</a>.
+        </p>
+        <hr>
+        <h1>Some of My Artworks</h1>
+        <p>P.S. Want these for yourselves? Hit me up at my <a href="INSTA LINK">Instagram</a> and I'll send you a full
+            quality one!</p>
+        <div id="artwork-container">
+            <div class="artwork">
+                <img src="web-assets/artworks/title screen7.webp">
+                <div class="artwork-info">
+                    <h2>Welcome to A Day in Parker's Life!</h2>
+                    <p class="mono">
+                        2560x1440, Made in Krita
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="web-assets/artworks/Untitled 43_202604220904_54665.webp">
+                <div class="artwork-info">
+                    <h2>"Under the Moonlit Gaze"</h2>
+                    <p class="mono">
+                        4096x2160, Made in GoPaint, 3:45 hours, 5,642 strokes
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="web-assets/artworks/Untitled 296_202604212254_32360.webp">
+                <div class="artwork-info">
+                    <h2>Happy New Year 2026!</h2>
+                    <p class="mono">
+                        4096x2160, Made in GoPaint, 10:56 hours, 20,153 strokes
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="web-assets/artworks/painterly study 2.webp">
+                <div class="artwork-info">
+                    <h2>Lost in a Forest</h2>
+                    <p>Both of them find themselves stranded in a dead, bleak forest, devoid of most but the desaturated
+                        shades of cyan: Their only guidance is the energy beacon near them. Parker, feeling nervous,
+                        asked Yekaterina's help for the way out. She, however, didn't bring her map either. A grimoire
+                        was instead held, containing recipes to cakes never before seen by even herself.
+                        <br><br>
+                        “Cath, help me find the way out of here.”<br>
+                        “Parker...I'm holding a grimoire, not a map.”
+                    </p>
+                    <p class="mono">
+                        2560x1440, Made in Krita, 4:14 hours
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div id="footer">
+        <div id="logo-footer">
+            <img src="web-assets/ododevs logo white.svg" style="height: 32px" />
+        </div>
+        <div id="footer-links">
+        </div>
+        <div id="footer-text">
+            Images on this website is
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">licensed under CC-BY-NC-SA</a>
+            unless stated otherwise. You are free to share, copy, and adapt
+            the material with attribution for non-commercial purposes.
+        </div>
+    </div>
+</body>
+<script>
+    const linksDropdown = document.getElementById('links-dropdown');
+    linksDropdown.addEventListener('change', function () {
+        const targetPath = this.value;
+        if (targetPath === "") {
+            window.location.href = "";
+        } else {
+            window.location.href = `${targetPath}/`;
+        }
+        this.value = "";
+    });
+</script>
+
+</html>
