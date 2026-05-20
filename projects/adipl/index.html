@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <title>A Day in Parker's Life: Prologue Chapter - ododevs</title>
+</head>
+
+<body>
+    <div id="header">
+        <div>
+            <a href="/">
+                <img src="/web-assets/ododevs logo white.svg" style="height: 35%" />
+            </a>
+        </div>
+        <div id="links">
+            <a href="/art/">Artworks</a>
+            <a href="/projects/" class="currently-selected">Projects</a>
+            <a href="/subsystem/">Services</a>
+            <a href="/blog/">Blog</a>
+        </div>
+        <select id="links-dropdown">
+            <option value="">Homepage</option>
+            <option value="art">Artworks</option>
+            <option value="projects">Projects</option>
+            <option value="subsystem">Services</option>
+            <option value="blog">Blog</option>
+        </select>
+    </div>
+    <div class="hero">
+        <img src="/web-assets/artworks/adipllogo.svg" style="
+                    filter: invert(100%)
+                        drop-shadow(0px 4px 8px rgba(0, 0, 0, 50));
+                    height: 35%;
+                " />
+        <p>The first installment in the A Day in Parker's Life Visual Novel Series.<br><i>Can Katya fullfill her
+                wish to
+                become Parker's girlfriend?</i></p>
+    </div>
+    <div id="content-wide">
+    </div>
+    </div>
+    <div id="footer">
+        <div id="logo-footer">
+            <img src="/web-assets/ododevs logo white.svg" style="height: 32px" />
+        </div>
+        <div id="footer-links">
+        </div>
+        <div id="footer-text">
+            Images on this website is
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">licensed under CC-BY-NC-SA</a>
+            unless stated otherwise. You are free to share, copy, and adapt
+            the material with attribution for non-commercial purposes.
+        </div>
+    </div>
+</body>
+<script>
+    const linksDropdown = document.getElementById('links-dropdown');
+    linksDropdown.addEventListener('change', function () {
+        const targetPath = this.value;
+        if (targetPath === "") {
+            window.location.href = "";
+        } else {
+            window.location.href = `/${targetPath}/`;
+        }
+        this.value = "";
+    });
+</script>
+
+</html>

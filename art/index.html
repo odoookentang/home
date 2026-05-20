@@ -21,24 +21,78 @@
             </a>
         </div>
         <div id="links">
-            <a href="art/" class="currently-selected">Artworks</a>
-            <a href="projects/">Projects</a>
-            <a href="subsystem/">Services</a>
-            <a href="blog/">Blog</a>
+            <a href="" class="currently-selected">Artworks</a>
+            <a href="/projects/">Projects</a>
+            <a href="/subsystem/">Services</a>
+            <a href="/blog/">Blog</a>
         </div>
         <select id="links-dropdown">
-            <option>Homepage</option>
-            <option>Artworks</option>
-            <option>Projects</option>
-            <option>Services</option>
-            <option>Blog</option>
+            <option value="">Homepage</option>
+            <option value="art">Artworks</option>
+            <option value="projects">Projects</option>
+            <option value="subsystem">Services</option>
+            <option value="blog">Blog</option>
         </select>
     </div>
-    <div id="hero-alt">
+    <div class="hero-small hero-adipl">
         <h1>Artworks</h1>
+        <i>Some drawings I've made for fun, as a test, or for my game.</i>
     </div>
-    <div id="content">
-
+    <div id="content-wide">
+        <div class="emphasis">
+            You can also see the entire catalog <a
+                href="https://drive.google.com/file/d/1GTDjjbYXN5p5y_qqdIQhQb-sgjR0QIl_/view?usp=sharing">as a PDF</a>.
+            This is preferable if you want to see the highest quality artworks in a neater layout.
+        </div>
+        <div id="artwork-container">
+            <div class="artwork">
+                <img src="/web-assets/artworks/title screen7.webp">
+                <div class="artwork-info">
+                    <h2>Welcome to A Day in Parker's Life!</h2>
+                    <p class="mono">
+                        2560x1440, Made in Krita
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="/web-assets/artworks/Untitled 43_202604220904_54665.webp">
+                <div class="artwork-info">
+                    <h2>"Under the Moonlit Gaze"</h2>
+                    <p class="mono">
+                        4096x2160, Made in GoPaint, 3:45 hours, 5,642 strokes
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="/web-assets/artworks/Untitled 296_202604212254_32360.webp">
+                <div class="artwork-info">
+                    <h2>Happy New Year 2026!</h2>
+                    <p class="mono">
+                        4096x2160, Made in GoPaint, 10:56 hours, 20,153 strokes
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="/web-assets/artworks/painterly study 2.webp">
+                <div class="artwork-info">
+                    <h2>Lost in a Forest</h2>
+                    <p>Both of them find themselves stranded in a dead, bleak forest, devoid of most but the desaturated
+                        shades of cyan: Their only guidance is the energy beacon near them. Parker, feeling nervous,
+                        asked Yekaterina's help for the way out. She, however, didn't bring her map either. A grimoire
+                        was instead held, containing recipes to cakes never before seen by even herself.
+                        <br><br>
+                        “Cath, help me find the way out of here.”<br>
+                        “Parker...I'm holding a grimoire, not a map.”
+                    </p>
+                    <p class="mono">
+                        2560x1440, Made in Krita, 4:14 hours
+                    </p>
+                </div>
+            </div>
+            <div class="artwork">
+                <img src="/web-assets/artworks/painterly study 2.webp">
+            </div>
+        </div>
     </div>
 
     </div>
@@ -56,5 +110,17 @@
         </div>
     </div>
 </body>
+<script>
+    const linksDropdown = document.getElementById('links-dropdown');
+    linksDropdown.addEventListener('change', function () {
+        const targetPath = this.value;
+        if (targetPath === "") {
+            window.location.href = "";
+        } else {
+            window.location.href = `/${targetPath}/`;
+        }
+        this.value = "";
+    });
+</script>
 
 </html>
